@@ -12,6 +12,11 @@ public:
         return GetWCharPtr();
     }
 
+    operator std::string()
+    {
+        return std::string(m_data.begin(), m_data.end() - 1);
+    }
+
     LPWSTR GetWCharPtr();
 
 private:
