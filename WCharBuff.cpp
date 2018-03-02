@@ -26,3 +26,9 @@ LPWSTR WCharBuff::GetWCharPtr()
         (LPWSTR)m_data.data() :
         nullptr;
 }
+
+string WCharBuff::GetString(LPWSTR str)
+{
+    wstring_convert<codecvt_utf8_utf16<wchar_t>> convert;
+    return convert.to_bytes(wstring(str));
+}

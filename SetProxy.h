@@ -9,9 +9,11 @@ typedef struct _SET_PROXY_OPTIONS
             fUseProxyServer =
             fBypassLocal =
             fClear =
+            fEnum =
             false;
     }
     WCharBuff sConnection;
+    std::string connRegEx;
     bool fDetectSettings;
     bool fUseConfigScript;
     WCharBuff sConfigScriptUrl;
@@ -19,4 +21,5 @@ typedef struct _SET_PROXY_OPTIONS
     WCharBuff sProxyServerUrl;
     bool fBypassLocal;
     bool fClear;
+    bool fEnum;
 } SET_PROXY_OPTIONS, *PSET_PROXY_OPTIONS;
